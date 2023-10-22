@@ -12,9 +12,10 @@
         <style>
             /* Estilos para la tabla */
             .header-strip {
-            background-color: #FFA500; /* Cambia el color de fondo según tus preferencias */
-            padding: 40px; /* Espacio de relleno alrededor del texto */
-            }   
+                background-color: #FFA500; /* Cambia el color de fondo según tus preferencias */
+                padding: 40px; /* Espacio de relleno alrededor del texto */
+            }
+    
             .table-serie {
                 border-collapse: collapse;
                 width: 30%; /* Ajusta el ancho de la tabla según tus necesidades */
@@ -29,7 +30,6 @@
                 top: 390px; /* Posición vertical en píxeles desde la parte superior */
                 left: 100px; /* Posición horizontal en píxeles desde la izquierda */
             }
-    
             th, td {
                 border: 1px solid #ccc;
                 padding: 8px;
@@ -46,11 +46,15 @@
             tr:nth-child(odd) {
                 background-color: #f2f2f2;
             }
+            
             h1{
                 position: absolute;
                 top: 20px; /* Posición vertical en píxeles desde la parte superior */
                 left: 80px; /* Posición horizontal en píxeles desde la izquierda */
             }
+            
+            /* Estilos para la tabla de detalles */
+    
         </style>
 </head>
 
@@ -58,7 +62,8 @@
     <div class="header-strip">
         <h1>TV Series</h1>
     </div>
-                <table class="table-serie" id="series">
+            <div class="container mt-3">
+                <table class="table-serie" id="tabla-datos">
                     <thead class="thead-dark">
                         <tr>
                             <th>#</th>
@@ -67,6 +72,7 @@
                             <th>Seasons</th>
                         </tr>
                     </thead>
+                    <tbody id="series"></tbody>
                 </table>
                 <table class="table-average" id="average">
                     <thead class="thead-dark">
@@ -75,6 +81,10 @@
                         </tr>
                     </thead>
                 </table>
+                <div class="col-md-6">
+                    <div class="card-container" id="container-card"></div>
+                </div>
+            </div>
     <script type="module" src="./scripts/main.js"></script>
     <script type="module" src="./scripts/data.js"></script>
     <script type="module" src="./scripts/serie.js"></script>
